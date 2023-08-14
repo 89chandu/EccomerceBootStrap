@@ -15,7 +15,7 @@ const Header = ({ isCart, setIsCart }) => {
 	return (
 		<React.Fragment>
 			<div className="">
-				<div className="z-20 bg-black text-white flex  py-4 fixed top-0 w-full md:justify-center  ">
+				<div className="z-20 bg-black text-white flex  py-4 fixed top-0 w-full sm:justify-center  ">
 					<div className=" md:px-6  mx-6 md:text-3xl">
 						<Link to ="/ContactUs">CONTACT US</Link>
 					</div>
