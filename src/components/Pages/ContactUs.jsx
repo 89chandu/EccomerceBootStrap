@@ -15,7 +15,7 @@ const ContactUs =  () => {
 		}
 		nameRef.current.value = emailRef.current.value = numberRef.current.value = "";
 		console.log(obj);
-		const response =await axios.post('https://ecommerce-anime-posters-default-rtdb.firebaseio.com/contact.json', obj);
+		const response =await axios.post('https://ecomreact-f6774-default-rtdb.firebaseio.com/contact.json', obj);
 		console.log(response);
 	}
 	return (
@@ -60,7 +60,7 @@ const ContactUs =  () => {
 			<div className="flex flex-col justify-center text-center mt-3 text-2xl p-3 ">
 				<div className="p-3">
 					<h1>Contact</h1>
-					<p className="font-thin">lyfesahil@gmail.com</p>
+					<p className="font-thin">chandubopche321@gmail.com</p>
 				</div>
 				<div className="p-3">
 					<h1>Based in</h1>
