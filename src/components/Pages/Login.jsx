@@ -20,7 +20,7 @@ const Login = () => {
             if (login) {
                 console.log('login being called')
                 setSendingReq(true);
-                const response = await axios.post(`https://ecommerce-backend-xe7w.onrender.com/users/login`, obj);
+                const response = await axios.post(`https://ecomreact-f6774-default-rtdb.firebaseio.com/users/login`, obj);
                 localStorage.setItem('token', response.data.token);
                 setSendingReq(false);
                 setAlertSeverity('success');
@@ -31,7 +31,7 @@ const Login = () => {
             else {
                 console.log('signup being called');
                 setSendingReq(true);
-                const response = await axios.post(`https://ecommerce-backend-xe7w.onrender.com/users/signup`, obj);
+                const response = await axios.post(`https://ecomreact-f6774-default-rtdb.firebaseio.com/users/signup`, obj);
                 setAlertSeverity('success');
                 setAlertMsg(response.data.msg);
                 setSendingReq(false);
