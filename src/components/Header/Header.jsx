@@ -3,6 +3,8 @@ import { CiShoppingCart } from "react-icons/ci";
 import hero from "../../Assets/heroImage.webp";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
+import Hero from "../../Assets/Animations/Hero.gif";
+import { Link } from "react-router-dom";
 const Header = ({ isCart, setIsCart }) => {
 	const { state } = useContext(CartContext);
 
@@ -15,13 +17,14 @@ const Header = ({ isCart, setIsCart }) => {
 			<div className="">
 				<div className="z-20 bg-black text-white flex  py-4 fixed top-0 w-full md:justify-center  ">
 					<div className=" md:px-6  mx-6 md:text-3xl">
-						<button>HOME</button>
+						<Link to ="/Home">HOME</Link>
+					</div>
+					<div className="md:px-6 mx-6 md:text-3xl animate-bounce">
+						<Link className="border-b-2 pb-1" to="/">STORE</Link>
 					</div>
 					<div className="md:px-6 mx-6 md:text-3xl">
-						<button>STORE</button>
-					</div>
-					<div className="md:px-6 mx-6 md:text-3xl">
-						<button>ABOUT</button>
+						
+						<Link to="/About">ABOUT</Link>
 					</div>
 
 					<div className="fixed right-4 px-2 top-0  ">
@@ -37,12 +40,15 @@ const Header = ({ isCart, setIsCart }) => {
 				</div>
 			</div>
 
-			<div className="  w-full mt-[58px] h-[150px]  md:h-[350px]">
+			<div className="hidden sm:block w-full mt-[58px] h-[150px]  md:h-[350px] border ">
 				<img
 					className=" w-full h-full object-cover "
 					src={hero}
 					alt="hero"
 				/>
+			</div>
+			<div className="sm:hidden">
+				<img className="ml-[70px]" src={Hero} alt="hero" />
 			</div>
 		</React.Fragment>
 	);

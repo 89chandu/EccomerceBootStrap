@@ -1,25 +1,22 @@
 import "./App.css";
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import React from "react";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/NavBar/Navbar";
-import { useState } from "react";
-import ModalPopup from "./components/NPM Packages/ReactModal";
-import { CartContextProvider } from "./components/Context/CartContext";
+
+import {
+	createBrowserRouter,
+	RouterProvider,
+} from "react-router-dom";
+
+import About from "./components/Pages/About";
+import Home from "./components/Pages/Home";
+import Store from "./components/Pages/Store";
+
+const router = createBrowserRouter([
+	{ path: "/", element: <Store /> },
+	{ path: "/Home", element: <Home /> },
+	{ path: "/About", element: <About /> },
+]);
+
 function App() {
-	const [isCart, setIsCart] = useState(false);
-	return (
-		<CartContextProvider className="App">
-			{isCart && (
-				<ModalPopup isCart={isCart} setIsCart={setIsCart} />
-			)}
-			<Header isCart={isCart} setIsCart={setIsCart} />
-			<Navbar />
-			<Main />
-			<Footer />
-		</CartContextProvider>
-	);
+	return<RouterProvider router={router} />;
 }
 
 export default App;

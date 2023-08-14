@@ -54,6 +54,7 @@ const Reducer = (state, action) => {
 				...state,
 				cartItems: newArr,
 				TotalCartAmount: state.TotalCartAmount - newTotal,
+				TotalCartItems: state.TotalCartItems - tbd.quantity
 			};
 		}
 
