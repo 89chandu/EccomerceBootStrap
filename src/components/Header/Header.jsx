@@ -17,7 +17,7 @@ const Header = ({ isCart, setIsCart }) => {
 			<div className="">
 				<div className="z-20 bg-black text-white flex  py-4 fixed top-0 w-full md:justify-center  ">
 					<div className=" md:px-6  mx-6 md:text-3xl">
-						<Link to ="/Home">HOME</Link>
+						<Link to ="/ContactUs">CONTACT US</Link>
 					</div>
 					<div className="md:px-6 mx-6 md:text-3xl animate-bounce">
 						<Link className="border-b-2 pb-1" to="/">STORE</Link>

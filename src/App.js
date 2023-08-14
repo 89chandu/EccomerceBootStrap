@@ -6,12 +6,12 @@ import {
 } from "react-router-dom";
 
 import About from "./components/Pages/About";
-import Home from "./components/Pages/Home";
+import ContactUs from "./components/Pages/ContactUs";
 import Store from "./components/Pages/Store";
 
 const router = createBrowserRouter([
 	{ path: "/", element: <Store /> },
-	{ path: "/Home", element: <Home /> },
+	{ path: "/ContactUs", element: <ContactUs /> },
 	{ path: "/About", element: <About /> },
 ]);
 
