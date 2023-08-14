@@ -36,7 +36,7 @@ const Home = () => {
 				className=" h-screen sm:hidden bg-[rgb(45,64,81)] border border-white mt-[56px]">
 				<h1>Home Page</h1>
 				<p>
-					fadf;adfadjfafjaoewfjajdsfadfasdfasdfadfadfadfadf
+					
 				</p>
 			</div>
 		</React.Fragment>
