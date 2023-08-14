@@ -7,30 +7,39 @@ const imgArr = [
 		anime: "Naruto",
 		description: "Almighty Push Wall Poster",
 		price: 350,
+		
 	},
 	{
 		img_id: 2,
 		description: "Roronoa Zoro Wall Poster",
 		anime: "One Piece",
 		price: 400,
+		
+
 	},
 	{
 		img_id: 3,
 		anime: "Chainsaw Man",
 		description: "Chainsaw Skull Wall Poster",
 		price: 200,
+		
+
 	},
 	{
 		img_id: 4,
 		anime: "Baki",
 		description: "Yujiro Hanma Wall Poster",
 		price: 150,
+		
+
 	},
 	{
 		img_id: 5,
 		anime: "One Piece",
 		description: "WhiteBeard Wall Poster",
 		price: 500,
+		
+
 	},
 	{
 		img_id: 6,

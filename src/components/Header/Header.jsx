@@ -1,15 +1,19 @@
 import React from "react";
 import { CiShoppingCart } from "react-icons/ci";
 import hero from "../../Assets/heroImage.webp";
-const Header = ({isCart, setIsCart}) => {
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
+const Header = ({ isCart, setIsCart }) => {
+	const { state } = useContext(CartContext);
+
 	const CartClickHandler = (e) => {
 		e.preventDefault();
-		setIsCart(true)
+		setIsCart(true);
 	};
 	return (
 		<React.Fragment>
 			<div className="">
-				<div className=" bg-black text-white flex  py-4 fixed top-0 w-full md:justify-center  ">
+				<div className="z-20 bg-black text-white flex  py-4 fixed top-0 w-full md:justify-center  ">
 					<div className=" md:px-6  mx-6 md:text-3xl">
 						<button>HOME</button>
 					</div>
@@ -26,9 +30,9 @@ const Header = ({isCart, setIsCart}) => {
 						</button>
 					</div>
 					<div
-						className="fixed right-10 cursor-pointer "
+						className="fixed right-11 cursor-pointer hover:animate-bounce "
 						onClick={CartClickHandler}>
-						<span>10</span>
+						<span>{state.TotalCartItems}</span>
 					</div>
 				</div>
 			</div>

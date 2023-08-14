@@ -6,7 +6,8 @@ import img3 from "../../Assets/img3.png";
 import img4 from "../../Assets/img4.png";
 import img5 from "../../Assets/img5.png";
 import img6 from "../../Assets/img6.png";
-
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
 const ImgCard = (props) => {
 	const imgMap = {
 		1: img1,
@@ -16,8 +17,16 @@ const ImgCard = (props) => {
 		5: img5,
 		6: img6,
 	};
+	const { Dispatch } = useContext(CartContext);
 	let imgSrc = imgMap[props.img_id];
 
+	const ADD2CartHandler = (e) => {
+		Dispatch({ type: "INC_CART_COUNT" });
+		Dispatch({
+			type: "ADD_2_CART",
+			obj: props,
+		});
+	};
 	return (
 		<div className=" flex flex-col justify-between border border-gray-300 max-w-[400px] max-h-[450px] shadow-lg ">
 			<div className="flex justify-between   pb-3 ">
@@ -42,7 +51,9 @@ const ImgCard = (props) => {
 				<p className="text-gray-500">
 					On sale from {props.price}
 				</p>
-				<button className="border bg-red-700 text-white p-1 rounded-md">
+				<button
+					onClick={ADD2CartHandler}
+					className="border bg-red-700 text-white p-1 rounded-md hover:bg-red-900 ">
 					Add to Cart
 				</button>
 			</div>
