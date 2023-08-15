@@ -18,7 +18,7 @@ const Login = () => {
     const AuthHandler = async (obj) => {
         try {
             if (login) {
-                console.log('wait login being called')
+                console.log('wait login being called...')
                 setSendingReq(true);
                 const response = await axios.post(`https://ecomreact-f6774-default-rtdb.firebaseio.com/users/login`, obj);
                 localStorage.setItem('token', response.data.token);
