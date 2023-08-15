@@ -76,9 +76,9 @@ const Login = () => {
             if (user) {
                 await user.updatePassword(newPassword);
 
-                // Display success message
+                // Display success 
                 setAlertSeverity('success');
-                setAlertMsg('Password changed successfully.');
+                setAlertMsg('Password changed successfully');
                 setOpenAlert(true);
 
                 // Clear input fields
