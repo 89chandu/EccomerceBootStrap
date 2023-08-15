@@ -111,7 +111,7 @@ export const CartContextProvider = (props) => {
 		async function GetCartItems() {
 			try {
 				const token = JSON.parse(localStorage.getItem('token'));
-				const response = await axios.get(`https://ecommerceapi-production-ba45.up.railway.app/cart/getAllCartItems`, { headers: { "Authorization": token } });
+				const response = await axios.get(`https://ecommerce-backend-xe7w.onrender.com/cart/getAllCartItems`, { headers: { "Authorization": token } });
 				console.log('get all cart items being called')
 				const fetchedCartItems = response.data.data;
 				Dispatch({ type: "SET_INITIAL_CART_ITEMS", cartItems: fetchedCartItems });
@@ -125,7 +125,7 @@ export const CartContextProvider = (props) => {
 	useEffect(() => {
 		const getfromDB = async () => {
 			try {
-				let fetchedStoreItems = await axios.get('https://ecommerceapi-production-ba45.up.railway.app/store/getProduct');
+				let fetchedStoreItems = await axios.get('https://ecommerce-backend-xe7w.onrender.com/store/getProduct');
 				console.log('get all products in store being called');
 				Dispatch({ type: "SET_INITIAL_STORE_ITEMS", StoreItems: fetchedStoreItems.data });
 			} catch (error) {
