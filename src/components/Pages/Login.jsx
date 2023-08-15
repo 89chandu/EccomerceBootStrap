@@ -78,7 +78,7 @@ const Login = () => {
 
                 // Display success 
                 setAlertSeverity('success');
-                setAlertMsg('Password changed successfully..');
+                setAlertMsg('Password changed successfully.');
                 setOpenAlert(true);
 
                 // Clear input fields
