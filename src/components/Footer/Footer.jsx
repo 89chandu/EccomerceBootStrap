@@ -14,13 +14,13 @@ const Footer = () => {
 					<p className="font-bold text-2xl p-1">FIND US</p>
 					<div className="text-gray-300">
 						<p>
-							Room NO C-201 Vindhyanchal Boys Hostel , NIT
-							Hamirpur,Himachal Pradesh
+							Ward no 02 Bhatera
+							Balaghat,Madhya Pradesh
 						</p>
-						<p>Hamirpur-177001</p>
-						<p>Phone: +91 8219488620</p>
+						<p>Balaghat-481001</p>
+						<p>Phone: +91 7999545311</p>
 						<p>Email</p>
-						<p>lyfesahil@gmail.com</p>
+						<p>chandubopche321@gmail.com</p>
 					</div>
 				</div>
 				<div>

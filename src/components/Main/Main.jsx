@@ -1,31 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ImgCard from "./ImgCard";
-import axios from "axios";
 import Loading from "../UI/Loading";
-
+import { useContext, useEffect,useCallback } from "react";
+import { CartContext } from "../Context/CartContext";
+import axios from "axios";
 
 const Main = () => {
 
-	const [imgArr, setImgArr] = useState([]);
+	const [storeItems, setStoreItems] = useState([]);
+
 
 	useEffect(() => {
 		const getfromDB = async () => {
 			try {
-				let response = await axios.get('https://ecommerce-backend-xe7w.onrender.com/store/getProduct')
-				setImgArr(response.data);
+				let fetchedStoreItems = await axios.get('https://ecommerceapi-production-ba45.up.railway.app/store/getProduct');
+				console.log('get all products in store being called');
+				setStoreItems(fetchedStoreItems.data);
 			} catch (error) {
 				console.log(error);
 			}
 		}
 		getfromDB();
-
 	}, [])
 
-	if (imgArr.length === 0)
-	return <Loading/>
+
+	if (storeItems === 0) { return <Loading /> }
+
+
+
 	return (
 		<div className="   grid  gap-7 justify-items-center    pt-10   md:grid-cols-3 px-2 max-w-[1300px] mx-auto">
-			{imgArr.map((item) => {
+			{storeItems.map((item) => {
 				return (
 					<ImgCard
 						key={item._id}
@@ -43,4 +48,5 @@ const Main = () => {
 };
 
 export default Main;
+
 

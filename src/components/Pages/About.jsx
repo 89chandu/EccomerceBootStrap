@@ -5,7 +5,7 @@ import Navigation from "../Navigation/Navigation";
 const About = () => {
 	return (
 		<div className="">
-			<Navigation val="about" />
+			<Navigation  />
 			<div className="hidden h-[1200px] sm:block  w-screen  p-6">
 				<div className="  h-2/5 grid grid-cols-2">
 					<div className="  bg-[rgb(248,192,187)]"></div>

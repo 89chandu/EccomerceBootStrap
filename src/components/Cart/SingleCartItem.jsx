@@ -17,20 +17,19 @@ const SingleCartItem = ({
 }) => {
 	const { Dispatch } = useContext(CartContext);
 
-	const RemoveFromDB = async(ProductId) => {
+	const RemoveFromDB = async (ProductId) => {
 		try {
-		 await axios.delete(`https://ecommerce-backend-xe7w.onrender.com/cart/RemoveFromCart/${ProductId}`);
+			await axios.delete(`https://ecommerceapi-production-ba45.up.railway.app/cart/RemoveFromCart/${ProductId}`);
 			console.log('remove a cart item being called');
-			
 		} catch (error) {
 			console.log(error);
 		}
 	}
 
 	const CartItemRemoveHandler = () => {
-		
-		Dispatch({ type: "REMOVE_FROM_CART", ProductId: ProductId });
 		RemoveFromDB(ProductId);
+		Dispatch({ type: "REMOVE_FROM_CART", ProductId: ProductId })
+
 	};
 
 	return (

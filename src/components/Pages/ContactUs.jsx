@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Link } from "react-router-dom";
+import Navigation from "../Navigation/Navigation";
 import axios from "axios";
 
 const ContactUs =  () => {
@@ -14,25 +14,14 @@ const ContactUs =  () => {
 			phoneNo: numberRef.current.value
 		}
 		nameRef.current.value = emailRef.current.value = numberRef.current.value = "";
-		console.log(obj);
-		const response =await axios.post('https://ecomreact-f6774-default-rtdb.firebaseio.com/contact.json', obj);
+		
+		const response = await axios.post('https://ecomreact-f6774-default-rtdb.firebaseio.com/contact.json', obj);
 		console.log(response);
+		
 	}
 	return (
 		<div>
-			<div className="z-20 bg-black text-white flex  py-4 fixed top-0 w-full justify-evenly  ">
-				<div className=" md:px-6  mx-6 md:text-3xl animate-bounce">
-					<Link className="border-b-2 pb-1" to="/ContactUs">
-						CONTACT US
-					</Link>
-				</div>
-				<div className="md:px-6 mx-6 md:text-3xl ">
-					<Link to="/">STORE</Link>
-				</div>
-				<div className="md:px-6 mx-6 md:text-3xl ">
-					<Link to="/About">ABOUT</Link>
-				</div>
-			</div>
+			<Navigation/>
 			<div className="mt-[68px] flex flex-col items-center " >
 				<div className=" text-6xl my-4">CONTACT US</div>
 				<div className="flex  border border-black box-border p-6">
@@ -60,7 +49,7 @@ const ContactUs =  () => {
 			<div className="flex flex-col justify-center text-center mt-3 text-2xl p-3 ">
 				<div className="p-3">
 					<h1>Contact</h1>
-					<p className="font-thin">chandubopche321@gmail.com</p>
+					<p className="font-thin">Chandubopche321@gmail.com</p>
 				</div>
 				<div className="p-3">
 					<h1>Based in</h1>
@@ -75,3 +64,6 @@ const ContactUs =  () => {
 };
 
 export default ContactUs;
+
+
+

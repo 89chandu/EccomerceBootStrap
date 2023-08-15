@@ -20,13 +20,9 @@ function App() {
 
 					<Route path="/About" element={<About />}></Route>
 
-					<Route
-						path="/ContactUs"
-						element={<ContactUs />}></Route>
+					<Route path="/ContactUs" element={<ContactUs />}></Route>
 
-					<Route
-						path="/:product_id"
-						element={<SingleProduct />}></Route>
+					<Route path="/:product_id" element={<SingleProduct />}></Route>
 
 					<Route path="*" element={<ErrorPage />}></Route>
 				</Routes>
