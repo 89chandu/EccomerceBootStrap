@@ -13,7 +13,7 @@ const Main = () => {
 	useEffect(() => {
 		const getfromDB = async () => {
 			try {
-				let fetchedStoreItems = await axios.get('https://ecommerce-backend-xe7w.onrender.com/store/getProduct');
+				let fetchedStoreItems = await axios.get('https://ecommerceapi-production-ba45.up.railway.app/store/getProduct');
 				console.log('get all products in store being called');
 				setStoreItems(fetchedStoreItems.data);
 			} catch (error) {

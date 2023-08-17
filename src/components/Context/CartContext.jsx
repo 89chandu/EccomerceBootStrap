@@ -125,7 +125,7 @@ export const CartContextProvider = (props) => {
 	useEffect(() => {
 		const getfromDB = async () => {
 			try {
-				let fetchedStoreItems = await axios.get('https://ecommerce-backend-xe7w.onrender.com/store/getProduct');
+				let fetchedStoreItems = await axios.get('https://ecommerceapi-production-ba45.up.railway.app/store/getProduct');
 				console.log('get all products in store being called');
 				Dispatch({ type: "SET_INITIAL_STORE_ITEMS", StoreItems: fetchedStoreItems.data });
 			} catch (error) {
